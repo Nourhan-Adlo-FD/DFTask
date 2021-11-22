@@ -1,0 +1,22 @@
+
+<div class="listingPage" *ngIf="!loading"> 
+    <section class="cardsList">
+        <app-card-item
+            *ngFor="let title of titles_Arr"
+            [cardTitle]="title"></app-card-item>
+    </section>
+    
+    <section class="tableSection" *ngIf="totalDaily">
+        <button (click)="Analyze()">Total</button>
+        <table>
+            <tbody>
+                <tr *ngFor="let item of totalDaily">
+                    <td>{{item?.label}}</td>
+                    <td>{{item?.quantity}}</td>
+                    <td>{{item?.unit}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+</div>
+<app-loader  [loading]="loading"></app-loader>

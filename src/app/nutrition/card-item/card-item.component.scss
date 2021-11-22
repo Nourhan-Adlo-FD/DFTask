@@ -1,0 +1,19 @@
+$mainColor: #ca4616;
+
+.cardItem {
+    background-color: rgb(255, 255, 255);
+    // border:1px solid  #ca4616;
+    border:1px solid  rgba(202, 70, 22, 0.3);
+    border-radius: 5px;
+    padding: 5px 15px 0;
+    margin: 10px 5px;
+    transition: border 0.2s;
+    // ----
+    &:hover {
+        border-color: #ca4616;
+    }
+    .title {
+        color: #ca4616;
+    }
+   
+}

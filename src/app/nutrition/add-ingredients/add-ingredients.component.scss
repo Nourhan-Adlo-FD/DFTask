@@ -1,0 +1,50 @@
+.home{
+    background-image: url('/assets/Home_2-BG.webp');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+.ingrediants-analyze{
+    background-color: rgba(0,0,0, 0.4);
+    border-radius: 6px;
+    padding: 8px 16px;
+    box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 15px;
+    textarea{
+        background-color: #fff;
+        background-image: none;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        box-shadow: none;
+        color: hsl(216, 6%, 70%);
+        font-size: 15px;
+        font-weight: 400;
+        min-height: 95px;
+        padding: 10px 15px;
+        outline: none;
+        resize: none;
+        &:focus {
+            border-color: #ca4616;
+        }
+    }
+    h3{
+        font-size: 24px;
+        font-weight: 700;
+        color: rgb(202, 70, 22);
+        text-align: center;
+        font-weight: bold;
+    }
+    figure{
+        color:white;
+        
+    }
+}
+}

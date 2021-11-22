@@ -1,0 +1,18 @@
+<main class="home">
+    <div class="ingrediants-analyze">
+        <h3>Analyze your meal</h3>
+        <figure>
+            <figcaption>For Example :</figcaption>
+        <ul>
+            <li>1 liter of orange juice</li>
+            <li>1 cup of tea</li>
+            <li>3 tablespoon of olive oil</li>
+        </ul>
+        
+    </figure>
+        <textarea name="ingr" [(ngModel)]="ingr" type="text" id="ingr"></textarea>
+        <span class="error" *ngIf="!isValid">Entered data is not correct, please follow above example </span>
+        <button [disabled]="!ingr"  (click)="valid()" >Analyze</button>
+    </div>
+</main>
+

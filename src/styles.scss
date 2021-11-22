@@ -1,1 +1,103 @@
 /* You can add global styles to this file, and also import other style files */
+
+// @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,600;1,300&display=swap');
+
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;600&display=swap");
+
+html,
+body {
+    padding: 0;
+    margin: 0;
+    background-color: #f6f6f6;
+    // ----
+    * {
+        font-family: "Open Sans", sans-serif;
+        box-sizing: border-box;
+        // font-weight: lighter;
+    }
+
+    .main-container {
+        @media (min-width:769px){
+            max-width: 80%;
+        }
+        min-height: 100vh;
+        margin: 0 auto;
+        display: block;
+        padding: 10px 10px 25px;
+        background-color: #fff;
+    }
+}
+button {
+    background-color: rgb(202, 70, 22);
+    color: white;
+    border: 1px solid rgb(202, 70, 22);
+    border-radius: 5px;
+    min-width: 60px;
+    min-height: 35px;
+    margin: 18px 0px 12px 0px;
+    font-size: 16px;
+    cursor: pointer;
+    // font-weight: 600;
+    padding: 0 8px;
+    text-transform: capitalize;
+    transition: background-color 0.2s;
+    // ----
+    &:disabled {
+        background-color: lightgray;
+        color: gray;
+        border: lightgray;
+        cursor: not-allowed;
+    }
+    // &:hover {
+    // &:hover(:not(:disabled)) {
+    &:hover:not(:disabled) {
+        background-color: rgba(202, 70, 22, 0.5);
+    }
+    &.outline {
+        background-color: transparent;
+        color: rgb(202, 70, 22);
+        &:hover {
+            background-color: rgb(202, 70, 22);
+            color: white;
+        }
+    }
+}
+.error {
+    margin: 8px 0px 0px 0px;
+    font-size: 13px;
+    color: #fd4040;
+}
+//////////////////////////////////////////////////////////////////////
+.tableSection {
+    background-image: url("/assets/loadData-BG.jpg");
+    // background-size: cover;
+    background-size: 30%;
+    background-repeat: no-repeat;
+    // background-position: center;
+    background-position-x: center;
+    background-position-y: bottom;
+
+    min-height: 300px;
+    max-height: 90vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    // ----
+    button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        // width: 90%;
+        margin: 10px 30px 20px;
+        min-height: 50px;
+    }
+    // ----
+    table {
+        background-color: #fff;
+        // ----
+        tr {
+            &:nth-child(odd) { background-color: rgba(202, 70, 22, 0.1);}
+            td { padding: 4px 6px;}
+        }
+    }
+    // ----
+}

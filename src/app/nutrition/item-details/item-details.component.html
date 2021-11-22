@@ -1,0 +1,25 @@
+<div class="DetailsPage" *ngIf="!loading">
+    <section class="detailsCard">
+        <div *ngIf="title_arr?.length">
+            <h3>ingrediant details</h3>
+            <p><span>Food </span> : {{title_arr[3]}}</p>
+            <p><span>Quantity</span> : {{title_arr[0]}}</p>
+            <p><span>Unit</span> : {{title_arr[1]}}</p>
+            <p><span>Calories</span> : {{details?.calories}}</p>
+            <p><span>Weight</span> : {{details?.totalWeight}}</p>
+        </div>
+    </section>
+    <section class="tableSection">
+        <button (click)="getTotalNutraition()"> total nutrition</button>
+        <table>
+            <tbody>
+                <tr *ngFor="let item of totalNutrients_Arr; let i = index">
+                    <td>{{item?.label}}</td>
+                    <td>{{item?.quantity}}</td>
+                    <td>{{item?.unit}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+</div>
+<app-loader  [loading]="loading"></app-loader>
