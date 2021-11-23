@@ -11,7 +11,12 @@
     </section>
     <section class="tableSection">
         <button (click)="getTotalNutraition()"> total nutrition</button>
-        <table>
+        <table *ngIf="totalNutrients_Arr">
+            <thead>
+                <td>label</td>
+                <td>quantity</td>
+                <td>unit</td>
+            </thead>
             <tbody>
                 <tr *ngFor="let item of totalNutrients_Arr; let i = index">
                     <td>{{item?.label}}</td>

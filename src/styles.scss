@@ -76,11 +76,15 @@ button {
     // background-position: center;
     background-position-x: center;
     background-position-y: bottom;
-
     min-height: 300px;
     max-height: 90vh;
     overflow-x: hidden;
     overflow-y: auto;
+    @media (max-width: 769px ) {
+        overflow-x: auto;
+       // min-width: 300px;
+    }
+    min-width:300px;
     // ----
     button {
         display: flex;
@@ -93,10 +97,21 @@ button {
     // ----
     table {
         background-color: #fff;
+        thead{
+            background-color: rgba(202, 70, 22);
+            color:#fff;
+            min-height: 30px;
+            text-transform: capitalize;
+            td{
+                padding: 8px;
+            }
+        }
         // ----
-        tr {
-            &:nth-child(odd) { background-color: rgba(202, 70, 22, 0.1);}
-            td { padding: 4px 6px;}
+        tbody{
+            tr {
+                &:nth-child(odd) { background-color: rgba(202, 70, 22, 0.1);}
+                td { padding: 4px 6px;}
+            }
         }
     }
     // ----

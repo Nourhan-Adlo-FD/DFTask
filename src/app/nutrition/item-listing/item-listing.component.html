@@ -6,9 +6,14 @@
             [cardTitle]="title"></app-card-item>
     </section>
     
-    <section class="tableSection" *ngIf="totalDaily">
+    <section class="tableSection">
         <button (click)="Analyze()">Total</button>
-        <table>
+        <table *ngIf="totalDaily.length > 0">
+            <thead>
+            <td>label</td>
+            <td>quantity</td>
+            <td>unit</td>
+           </thead>
             <tbody>
                 <tr *ngFor="let item of totalDaily">
                     <td>{{item?.label}}</td>
