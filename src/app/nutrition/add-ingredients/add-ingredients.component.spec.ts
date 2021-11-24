@@ -8,9 +8,9 @@ describe('AddIngredientsComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ AddIngredientsComponent ]
+      declarations: [AddIngredientsComponent]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {
@@ -22,4 +22,11 @@ describe('AddIngredientsComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  describe('shoud splitLine', () => {
+
+    expect(component?.splitLine(' 1 liter of orange juice\n')).toBe(['1 liter of orange juice'])
+  })
 });
+
+

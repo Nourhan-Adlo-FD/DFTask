@@ -17,6 +17,11 @@ export class AddIngredientsComponent implements OnInit {
   ngOnInit(): void {
 
   }
+  splitLine(ob:string){
+    let arr = ob?.trim().split('\n'); 
+    return ob?.trim().split('\n')
+
+  }
   valid() {
     
     this.lineRows_Arr = this.ingr?.trim().split('\n'); //All Textbox lines.
